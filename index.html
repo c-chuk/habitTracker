@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Habit Tracker</h1>
+        <button id="toggle-theme">Toggle Theme</button>
+    </header>
+    
+    <main>
+        <!-- Habit Form Section -->
+        <section id="habit-form">
+            <h2>Add Habit</h2>
+            <input type="text" id="habit-name" placeholder="Habit Name">
+            <button id="add-habit">Add Habit</button>
+        </section>
+
+        <!-- Habit List Section -->
+        <section id="habit-list">
+            <h2>Your Habits</h2>
+            <ul id="habits"></ul>
+        </section>
+    </main>
+
+    <!-- Chatbot Interface -->
+    <div id="chatbot-container">
+        <h2>AI Chatbot</h2>
+        <div id="chat-history"></div>
+        <input type="text" id="chat-input" placeholder="Ask me about your habits...">
+        <button id="send-btn">Send</button>
+    </div>
+</body>
+</html>

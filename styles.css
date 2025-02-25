@@ -1,0 +1,287 @@
+/* ======= Global Styles ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Default: Green Theme */
+body {
+    background-color: #28a745;
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ======= Header ======= */
+header {
+    background: #218838;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ======= Dark Mode (Toggled) ======= */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode header {
+    background: #1e1e1e;
+}
+
+/* ======= Main Content ======= */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+#habit-form, #habit-list {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 1.5rem;
+    color: black;
+}
+
+body.dark-mode #habit-form,
+body.dark-mode #habit-list {
+    background: #1e1e1e;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* ======= Input Fields ======= */
+input, button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+body.dark-mode input {
+    background: #222;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* ======= Buttons ======= */
+button {
+    background-color: #218838;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a6e2a;
+}
+
+body.dark-mode button {
+    background: #444;
+}
+
+body.dark-mode button:hover {
+    background: #666;
+}
+
+/* ======= Habit List ======= */
+#habits {
+    list-style: none;
+    padding: 0;
+}
+
+#habits li {
+    background: #f1f1f1;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    color: black;
+}
+
+body.dark-mode #habits li {
+    background: #333;
+    color: white;
+}
+
+/* Habit Actions */
+.habit-actions button {
+    background-color: #dc3545;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+}
+
+.habit-actions button:hover {
+    background-color: #c82333;
+}
+
+/* Habit Streak */
+.streak {
+    font-weight: bold;
+    color: #218838;
+}
+
+body.dark-mode .streak {
+    color: #3ee267;
+}
+
+/* ======= Chatbot Styles ======= */
+#chatbot-container {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: black;
+}
+
+body.dark-mode #chatbot-container {
+    background: #1e1e1e;
+    color: white;
+    border: 1px solid #444;
+}
+
+/* Chatbot Header */
+#chatbot-container h2 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Chat History */
+#chat-history {
+    height: 250px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    color: black;
+}
+
+body.dark-mode #chat-history {
+    background: #2c2c2c;
+    color: white;
+}
+
+/* Chat Input */
+#chat-input {
+    width: calc(100% - 70px);
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+}
+
+body.dark-mode #chat-input {
+    background: #222;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* Chatbot Send Button */
+#send-btn {
+    padding: 8px 12px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background: #0056b3;
+}
+
+body.dark-mode #send-btn {
+    background: #444;
+}
+
+body.dark-mode #send-btn:hover {
+    background: #666;
+}
+
+/* Chat Message History */
+.history {
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.history.user {
+    background: #007BFF;
+    color: white;
+    text-align: right;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.history.bot {
+    background: #e0e0e0;
+    text-align: left;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+body.dark-mode .history.bot {
+    background: #2c2c2c;
+}
+
+body.dark-mode .history.user {
+    background: #0056b3;
+}
+
+/* ======= Toggle Theme Button ======= */
+#toggle-theme {
+    background: #ffc107;
+    color: black;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+#toggle-theme:hover {
+    background: #e0a800;
+}
+
+body.dark-mode #toggle-theme {
+    background: #444;
+    color: white;
+}
+
+body.dark-mode #toggle-theme:hover {
+    background: #666;
+}
+
+/* ======= Accessibility ======= */
+button:focus, input:focus {
+    outline: 2px solid #007bff;
+}
+
+body.dark-mode button:focus, body.dark-mode input:focus {
+    outline: 2px solid #fff;
+}
