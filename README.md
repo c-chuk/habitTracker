@@ -1,8 +1,6 @@
-# habit-tracker
+# habitTracker
 Tracking your habit
 
-# Website Link 
-- https://c-chuk.github.io/habit-tracker/
 
 # Features:
 - Add habit
@@ -16,4 +14,3 @@ Tracking your habit
 - Adding: Add habit "  "
 - Deleting: Delete habit "  "
 - countine streak: Increase streak "  "
-
