@@ -1,6 +1,8 @@
 # habitTracker
 Tracking your habit
 
+# Website
+- https://c-chuk.github.io/habitTracker/
 
 # Features:
 - Add habit
